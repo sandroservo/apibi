@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Dadosbi {
+  id       Int    @id @default(autoincrement()) @db.UnsignedInt
+  codsupervisor String @db.VarChar(255)
+  supervisor    String @db.VarChar(255)
+  codusur       String @db.VarChar(255)
+  vendedor      String @db.VarChar(255)
+  codfornec     String @db.VarChar(255)
+  fornecedor    String @db.VarChar(255)
+  codepto       String @db.VarChar(255)
+  departamento  String @db.VarChar(255)
+  codcli        String @db.VarChar(255)
+  cliente       String @db.VarChar(255)
+  codcidade     String @db.VarChar(255)
+  nomecidade    String @db.VarChar(255)
+  uf            String @db.VarChar(255)
+  populacao     String @db.VarChar(255)
+  codprod       String @db.VarChar(255)
+  descricao     String @db.VarChar(255)
+  unidade       String @db.VarChar(255)
+  dtsaida       String @db.VarChar(255)
+  numnota       String @db.VarChar(255)
+  qtvendida     String @db.VarChar(255)
+  custotal      String @db.VarChar(255)
+  peso          String @db.VarChar(255)
+  vldev         String @db.VarChar(255)
+  qtdev         String @db.VarChar(255)
+  desconto      String @db.VarChar(255)
+  vlatendido    String @db.VarChar(255)
+  vltabela      String @db.VarChar(255)
+  plpag         String @db.VarChar(255)
+  numdias       String @db.VarChar(255)
+  codrede       String @db.VarChar(255)
+  codpraca      String @db.VarChar(255)
+  praca         String @db.VarChar(255)
+  placa         String @db.VarChar(255)
+  codrota       String @db.VarChar(255)
+  rota          String @db.VarChar(255)
+  motorista     String @db.VarChar(255)
+
+  @@map("dadosbi")
+}
